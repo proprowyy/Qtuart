@@ -2,7 +2,11 @@
 #define FRMMAIN_H
 
 #include <QDialog>
-
+#include <QMenuBar>
+#include<QtSerialPort/QSerialPort>
+#include <QtSerialPort/QSerialPortInfo>
+#include <QMainWindow>
+#include<QProcess>
 namespace Ui {
 class frmMain;
 }
@@ -34,6 +38,13 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void Ttftpopen();
+    void Pingopen();
+    void Rebootopen();
+    void Aboutopen();
+
+   void on_btnping_clicked();
+
 private:
     Ui::frmMain *ui;
 
@@ -41,6 +52,16 @@ private:
     bool mousePressed;
     bool max;
     QRect location;
+    QSerialPort *myCOM;
+   QMenuBar * menuBar ;
+    QMenu *Tool;
+    QMenu *HELP;
+    QAction* Ttftp;
+    QAction* Ping;
+    QAction* Reboot;
+    QAction* About;
+    QProcess *Process;
+
 
     void InitStyle();
 

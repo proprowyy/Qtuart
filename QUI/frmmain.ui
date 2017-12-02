@@ -96,7 +96,7 @@
          <string notr="true">font: 10pt &quot;微软雅黑&quot;;</string>
         </property>
         <property name="text">
-         <string>自定义UI演示(作者:刘典武 QQ:517216493)</string>
+         <string>UART(作者:王彦彦 QQ:517216493)</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -127,37 +127,6 @@
          <property name="bottomMargin">
           <number>0</number>
          </property>
-         <item>
-          <widget class="QPushButton" name="btnMenu">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>31</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="cursor">
-            <cursorShape>ArrowCursor</cursorShape>
-           </property>
-           <property name="focusPolicy">
-            <enum>Qt::NoFocus</enum>
-           </property>
-           <property name="toolTip">
-            <string>菜单</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="flat">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
          <item>
           <widget class="QPushButton" name="btnMenu_Min">
            <property name="sizePolicy">
@@ -264,13 +233,12 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5"/>
+      </item>
+      <item>
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
-         <widget class="QLineEdit" name="lineEdit">
-          <property name="text">
-           <string>今天天气不错</string>
-          </property>
-         </widget>
+         <widget class="QComboBox" name="comboBox"/>
         </item>
         <item>
          <widget class="QPushButton" name="pushButton">
@@ -281,7 +249,7 @@
            </size>
           </property>
           <property name="text">
-           <string>信息框</string>
+           <string>打开串口</string>
           </property>
          </widget>
         </item>
@@ -294,7 +262,7 @@
            </size>
           </property>
           <property name="text">
-           <string>询问框</string>
+           <string>关闭串口</string>
           </property>
          </widget>
         </item>
@@ -307,7 +275,7 @@
            </size>
           </property>
           <property name="text">
-           <string>错误框</string>
+           <string>保存日志</string>
           </property>
          </widget>
         </item>
@@ -320,62 +288,36 @@
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_4">
          <item>
-          <widget class="QRadioButton" name="radioButton">
+          <widget class="QLabel" name="label">
            <property name="text">
-            <string>男</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
+            <string>Base_Ip：</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QRadioButton" name="radioButton_2">
+          <widget class="QLineEdit" name="ipinput"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_3">
            <property name="text">
-            <string>女</string>
+            <string/>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QCheckBox" name="checkBox">
+          <widget class="QLabel" name="label_2">
            <property name="text">
-            <string>中国</string>
-           </property>
-           <property name="checked">
-            <bool>true</bool>
+            <string>Num：</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QCheckBox" name="checkBox_2">
+          <widget class="QLineEdit" name="number"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnping">
            <property name="text">
-            <string>美国</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="comboBox">
-           <item>
-            <property name="text">
-             <string>测试项目1</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>测试项目2</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>测试项目3</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item>
-          <widget class="QDateEdit" name="dateEdit">
-           <property name="calendarPopup">
-            <bool>true</bool>
+            <string>Start</string>
            </property>
           </widget>
          </item>
@@ -383,146 +325,18 @@
        </widget>
       </item>
       <item>
-       <widget class="QTabWidget" name="tabWidget">
-        <property name="currentIndex">
-         <number>0</number>
-        </property>
-        <widget class="QWidget" name="tab">
-         <attribute name="title">
-          <string>选项卡1</string>
-         </attribute>
-         <layout class="QVBoxLayout" name="verticalLayout_3">
-          <item>
-           <widget class="QTreeWidget" name="treeWidget">
-            <column>
-             <property name="text">
-              <string>学号</string>
-             </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>成绩</string>
-             </property>
-            </column>
-            <item>
-             <property name="text">
-              <string>061104023</string>
-             </property>
-             <property name="text">
-              <string>105</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>061104056</string>
-             </property>
-             <property name="text">
-              <string>245</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>061104065</string>
-             </property>
-             <property name="text">
-              <string>265</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QWidget" name="tab_2">
-         <attribute name="title">
-          <string>选项卡2</string>
-         </attribute>
-         <layout class="QVBoxLayout" name="verticalLayout_4">
-          <item>
-           <widget class="QTableWidget" name="tableWidget">
-            <property name="selectionBehavior">
-             <enum>QAbstractItemView::SelectRows</enum>
-            </property>
-            <row>
-             <property name="text">
-              <string>1</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>2</string>
-             </property>
-            </row>
-            <row>
-             <property name="text">
-              <string>3</string>
-             </property>
-            </row>
-            <column>
-             <property name="text">
-              <string>学号</string>
-             </property>
-            </column>
-            <column>
-             <property name="text">
-              <string>成绩</string>
-             </property>
-            </column>
-            <item row="0" column="0">
-             <property name="text">
-              <string>061104023</string>
-             </property>
-            </item>
-            <item row="0" column="1">
-             <property name="text">
-              <string>105</string>
-             </property>
-            </item>
-            <item row="1" column="0">
-             <property name="text">
-              <string>061104025</string>
-             </property>
-            </item>
-            <item row="1" column="1">
-             <property name="text">
-              <string>108</string>
-             </property>
-            </item>
-            <item row="2" column="0">
-             <property name="text">
-              <string>061104056</string>
-             </property>
-            </item>
-            <item row="2" column="1">
-             <property name="text">
-              <string>235</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </widget>
-      </item>
-      <item>
-       <widget class="QProgressBar" name="progressBar">
-        <property name="value">
-         <number>24</number>
+       <widget class="QTextBrowser" name="textBrowser">
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'微软雅黑'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QSlider" name="horizontalSlider">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QScrollBar" name="horizontalScrollBar">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
+       <widget class="QLineEdit" name="lineEdit"/>
       </item>
      </layout>
     </widget>

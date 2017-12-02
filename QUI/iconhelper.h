@@ -6,7 +6,7 @@
 #include <QFontDatabase>
 #include <QMutex>
 #include <QLabel>
-#include <QPushButton>
+#include <qpushbutton.h>
 #include <QApplication>
 
 class IconHelper : public QObject

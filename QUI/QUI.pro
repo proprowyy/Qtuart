@@ -6,11 +6,11 @@
 
 QT       += core gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+QT += widgets
 
 TARGET = QUI
 TEMPLATE = app
-
+QT       += serialport
 
 SOURCES += main.cpp\
         frmmain.cpp \
